@@ -10,7 +10,7 @@ echo Compiling %FileName%
 javac -d out %FileName%
 
 echo Compiling %TestFileName%
-javac -d out -cp out:%JUnitJAR% %TestFileName%
+javac -d out -cp %JUnitJAR% %FileName% %TestFileName%
 
 echo Running tests from %TestFileName%
 java -jar %JUnitJAR% --class-path out --scan-class-path
